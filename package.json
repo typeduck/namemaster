@@ -1,0 +1,39 @@
+{
+    "name": "namemaster",
+    "version": "0.0.1",
+    "description": "namemaster.de API client",
+    "main": "js/namemaster.js",
+    "files": [
+        "js/namemaster.js",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "pretest": "./node_modules/.bin/coffee -o js -c src",
+        "prepublish": "./node_modules/.bin/coffee -o js -c src",
+        "test": "mocha js/test.js"
+    },
+    "dependencies": {
+        "bluebird": "^3.2.2",
+        "request": "^2.69.0"
+    },
+    "devDependencies": {
+        "coffee-script": "^1.10.0",
+        "convig": "^1.2.0",
+        "mocha": "^2.4.5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/typeduck/namemaster.git"
+    },
+    "keywords": [
+        "dns",
+        "namemaster"
+    ],
+    "bugs": {
+        "url": "https://github.com/typeduck/namemaster/issues"
+    },
+    "author": "typeduck",
+    "license": "MIT",
+    "homepage": "https://github.com/typeduck/namemaster#readme"
+}
