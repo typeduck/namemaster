@@ -1,6 +1,6 @@
 {
     "name": "namemaster",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "namemaster.de API client",
     "main": "js/namemaster.js",
     "files": [

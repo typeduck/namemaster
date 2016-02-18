@@ -40,6 +40,16 @@ class ZoneManager
         throw err
       @deleteHost(host).then(() => @request(qs) )
     )
+  # If we already have a record, allow an update
+  updateHostAddress: (host, ipv4, dns_id) ->
+    qs = {}
+    qs.action = "Update_IN"
+    qs.typ = "A"
+    qs.hostname = "#{host}.#{@zone}"
+    qs.adresse = ipv4
+    qs.TTL = @ttl
+    qs.dns_id = dns_id
+    @request(qs)
 
   # Parses the key/value pairs into data object
   request: (qs) ->
